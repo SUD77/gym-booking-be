@@ -8,7 +8,10 @@
     "build": "turbo run build",
     "typecheck": "turbo run typecheck",
     "lint": "turbo run lint",
-    "format": "prettier -w ."
+    "format": "prettier -w .",
+    "db:start": "docker compose up -d postgres",
+    "db:stop": "docker compose down",
+    "db:reset": "docker compose down -v && docker compose up -d postgres"
   },
   "repository": {
     "type": "git",

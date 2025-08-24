@@ -1,0 +1,19 @@
+﻿services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: gym_postgres
+    ports:
+      - "5432:5432"         # If 5432 is busy, change to "5433:5432"
+    environment:
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: dev
+      POSTGRES_DB: gym_app
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dev -d gym_app"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+volumes:
+  pg_data:
