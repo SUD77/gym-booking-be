@@ -1,0 +1,47 @@
+﻿# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Env files (keep example)
+.env
+.env.*
+!.env.example
+
+# Logs & diagnostics
+logs/
+*.log
+*.log.*
+pids/
+*.pid
+*.seed
+coverage/
+.nyc_output/
+
+# Caches & temp
+.cache/
+.tmp/
+tmp/
+temp/
+
+# Editors/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Tooling (future-friendly)
+.turbo/
+.eslintcache
+
+# Docker (local artifacts)
+.docker/
